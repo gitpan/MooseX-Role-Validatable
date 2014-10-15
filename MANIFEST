@@ -8,8 +8,6 @@ Makefile.PL
 README
 cpanfile
 dist.ini
-lib/MooX/Role/Validatable.pm
-lib/MooX/Role/Validatable/Error.pm
 lib/MooseX/Role/Validatable.pm
 lib/MooseX/Role/Validatable/Error.pm
 t/errors.t
