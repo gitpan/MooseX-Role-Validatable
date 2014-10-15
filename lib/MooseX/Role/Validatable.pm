@@ -2,9 +2,8 @@ package MooseX::Role::Validatable;
 
 use Moose::Role;
 use MooseX::Role::Validatable::Error;
-use Types::Standard qw( Str Int Bool ArrayRef );
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 
 use Class::Load qw/load_class/;
 use Carp qw(confess);
@@ -12,13 +11,13 @@ use Scalar::Util qw/blessed/;
 
 has '_init_errors' => (
     is       => 'ro',
-    isa      => ArrayRef,
+    isa      => 'ArrayRef',
     init_arg => undef,
     default  => sub { return [] },
 );
 has '_validation_errors' => (
     is       => 'ro',
-    isa      => ArrayRef,
+    isa      => 'ArrayRef',
     init_arg => undef,
     default  => sub { return [] },
 );
@@ -33,7 +32,7 @@ has 'error_class' => (
 
 has validation_methods => (
     is         => 'ro',
-    isa        => ArrayRef [Str],
+    isa        => 'ArrayRef[Str]',
     lazy_build => 1,
 );
 
