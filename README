@@ -7,7 +7,7 @@ SYNOPSIS
         use Moose;
         with 'MooseX::Role::Validatable';
 
-        has 'attr1' => (is => 'lazy');
+        has 'attr1' => (is => 'ro', lazy_build => 1);
 
         sub _build_attr1 {
             my $self = shift;
